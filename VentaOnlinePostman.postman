@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "b7a68849-4aca-4a78-a484-2c1f63b19744",
+		"name": "VentaOnline",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Victor",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "vmendez",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMzYwNzgyOTk0NzJjNGNmNmMwZTYiLCJuYW1lIjoiQURNSU4iLCJuaWNrbmFtZSI6IkFETUlOIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjE1NjA3NDQwfQ.9igYamPqyTkT9ds3ESV8o0cW8Y6wXg-tU0GN4Ec8uK4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/listUsers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"listUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nickname",
+							"value": "nreina",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMWVmNjU5ZDg5MDBhMThlOTljNzciLCJuYW1lIjoiQWxlamFuZHJvIiwibmlja25hbWUiOiJhbWVuZGV6Iiwicm9sZSI6IlVTRVIiLCJpYXQiOjE2MTU2MDg1MzZ9.2kkuIKq7koTkgvyP9N0pt2FK-oJlMnrIvQKLgtNDo38",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/deleteUser/604c1ef659d8900a18e99c77",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"deleteUser",
+						"604c1ef659d8900a18e99c77"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMWUzM2JjMTliMTI3Yjg5NzVmMjMiLCJuYW1lIjoiTmVzdG9yIiwibmlja25hbWUiOiJucmVpbmEiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTYwOTA2MX0.wIVHINs7JJAPS2EZj8MraLM4W5ZEMTU8dCK0xVLX7UI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "William",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/updateUser/604c1e33bc19b127b8975f23",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updateUser",
+						"604c1e33bc19b127b8975f23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMWUzM2JjMTliMTI3Yjg5NzVmMjMiLCJuYW1lIjoiTmVzdG9yIiwibmlja25hbWUiOiJucmVpbmEiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTYxMjkxNn0.sDLavDuBb7LqeEQcONIvGA7W74t30KvSyOD8tJ70oAQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Tecnologia",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/createCategory/604c1e33bc19b127b8975f23",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createCategory",
+						"604c1e33bc19b127b8975f23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMzYwNzgyOTk0NzJjNGNmNmMwZTYiLCJuYW1lIjoiQURNSU4iLCJuaWNrbmFtZSI6IkFETUlOIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjE1NjExNTAxfQ.M2zWuug7FVs6Pya06_Nj7lEBTgVOujvzT70KHSXsVZg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Fresas",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Comida",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Categoria",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMWUzM2JjMTliMTI3Yjg5NzVmMjMiLCJuYW1lIjoiTmVzdG9yIiwibmlja25hbWUiOiJucmVpbmEiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTYxMzY3Nn0.7WWjWS7IVrnes8HkxkS_RxU7f_7sLwNB_K8-Y1tGOyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "hola",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/deleteCategory/604c4dda035a1c34585b610b/604c1e33bc19b127b8975f23",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"deleteCategory",
+						"604c4dda035a1c34585b610b",
+						"604c1e33bc19b127b8975f23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categoria",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMWUzM2JjMTliMTI3Yjg5NzVmMjMiLCJuYW1lIjoiTmVzdG9yIiwibmlja25hbWUiOiJucmVpbmEiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTYxMzY3Nn0.7WWjWS7IVrnes8HkxkS_RxU7f_7sLwNB_K8-Y1tGOyQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "iduser",
+							"value": "604c1e33bc19b127b8975f23",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/listCategorys/604c4e21035a1c34585b610c",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"listCategorys",
+						"604c4e21035a1c34585b610c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Producto",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMWUzM2JjMTliMTI3Yjg5NzVmMjMiLCJuYW1lIjoiTmVzdG9yIiwibmlja25hbWUiOiJucmVpbmEiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTYxNTYxMzk2NX0.4hQW6gspOW31TIV7BqyYUy-h0P-0ISmDl5Ld-9-24ws",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/listProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"listProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Stock",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDRjMzYwNzgyOTk0NzJjNGNmNmMwZTYiLCJuYW1lIjoiQURNSU4iLCJuaWNrbmFtZSI6IkFETUlOIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjE1NjE0MTgxfQ.HJshdbMmOwJI-ZM42UhymnEYIszR7iVBfte-AxGjhqA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/addStock/604c47ec397b4c1b2c0107f7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"addStock",
+						"604c47ec397b4c1b2c0107f7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
